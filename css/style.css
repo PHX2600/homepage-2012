@@ -1,0 +1,165 @@
+/* -------------------------------------------------------------------------- */
+/* -----| GENERAL |---------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+html {
+}
+
+body {
+    padding-top: 75px;
+    position: relative;
+}
+
+a {
+    color: #981B1E;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| HEADER |----------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.header {
+    background: #121212 url(images/black_gradient.png) repeat-x left top;
+    border-bottom: 5px solid #981B1E;
+    padding: 15px 30px;
+    overflow: hidden;
+}
+
+.site-title {
+    display: inline-block;
+    margin: 0 ;
+}
+
+.site-title a {
+    background: transparent url(../img/phx2600_logo.png) no-repeat center center;
+    display: block;
+    height: 40px;
+    width: 214px;
+}
+
+.definition {
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    color: #666;
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    text-align: center;
+} 
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| NAVIGATION |------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.site-navigation {
+    display: inline-block;
+    margin: 6px 0 0;
+}
+
+.site-navigation li {
+    display: inline-block;
+    float: left;
+    list-style: none;
+    margin-left: 8px;
+}
+
+.site-navigation li a {
+    color: #999;
+    display: block;
+    padding: 5px 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-navigation li a:hover {
+    color: #FFF;
+}
+
+.site-navigation li.current_page_item a,
+.site-navigation li.current-menu-item a {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| CONTENT |---------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.content-box {
+    background-color: #FFF;
+    border: 1px solid #DFDFDF;
+    border-radius: 10px;
+    padding: 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.feeds h3 {
+    border-bottom: 1px dotted #333;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| MEETING INFO |----------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.next-meeting {
+    padding: 15px;
+    text-align: center;
+}
+
+.next-meeting .meeting-month,
+.next-meeting .meeting-day,
+.next-meeting .meeting-year {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px #999;
+    color: #333;
+    display: inline-block;
+    font-size: 6em;
+    font-weight: bold;
+    margin: 5px;
+    position: relative;
+    -moz-border-radius: 8px;
+    -moz-box-shadow: 0px 2px 4px #999;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: 0px 2px 4px #999;
+}
+
+.next-meeting .number {
+    padding: 48px 38px;
+}
+
+.next-meeting .midLine {
+    background-color: #333;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.next-meeting p {
+    font-size: 1.4em;
+    line-height: 1.5em;
+    margin: 1em 0;
+    text-align: center;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| MISCELLANEOUS |---------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.hide-text {
+    margin-left: -20000px !important;
+}
+
