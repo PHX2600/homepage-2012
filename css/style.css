@@ -2,21 +2,12 @@
 /* -----| GENERAL |---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-html {
-}
-
 body {
     padding-top: 75px;
-    position: relative;
 }
 
 a {
     color: #981B1E;
-    text-decoration: underline;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 
@@ -71,7 +62,7 @@ a:hover {
 }
 
 .site-navigation li a {
-    color: #999;
+    color: #FFF;
     display: block;
     padding: 5px 8px;
     font-size: 1.1em;
@@ -81,6 +72,15 @@ a:hover {
 
 .site-navigation li a:hover {
     color: #FFF;
+}
+
+.site-navigation li a i {
+    position: relative;
+    top: 1px;
+}
+
+.site-navigation li.active .link-wrapper {
+    border-bottom: 2px solid #FFF;
 }
 
 .site-navigation li.current_page_item a,
@@ -105,6 +105,45 @@ a:hover {
 
 .feeds h3 {
     border-bottom: 1px dotted #333;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| FEED LISTS |------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.feed-list {
+    margin: 0;
+    padding: 0;
+}
+
+.feed-list li {
+    border-bottom: 1px solid #DEDEDE;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feed-list li a {
+    display: block;
+    padding: 5px;
+}
+
+.feed-list li a:hover {
+    background-color: #F3F3F3;
+    text-decoration: none;
+}
+
+.feed-list .feed-title {
+    color: #981B1E;
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.feed-list small {
+    color: #999;
+    font-size: .85em;
 }
 
 
@@ -152,6 +191,31 @@ a:hover {
     line-height: 1.5em;
     margin: 1em 0;
     text-align: center;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| BOOTSTRAP OVERRIDES |---------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.alert {
+    margin: 10px 0;
+}
+
+.alert a {
+    text-decoration: underline;
+}
+
+.alert-info a {
+    color: #3A87AD;
+}
+
+.alert-success a {
+    color: #468847;
+}
+
+.alert .close {
+    text-decoration: none;
 }
 
 

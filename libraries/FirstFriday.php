@@ -12,7 +12,7 @@
     class FirstFriday {
         
         // Define application version
-        const VERSION = '1.1.0';
+        const VERSION = '1.2.0';
         
         /**
          * Main first Friday function. Calculates and returns a timestamp or 
@@ -23,9 +23,9 @@
          * @return string Formatted string of the next first Friday
          * @access public
          */
-        public function firstFriday($formatted = true, $format = "F j, Y") {
+        public function firstFriday($format = "F j, Y") {
             
-            if ($formatted == true) {
+            if ($format !== false) {
                 return $this->_firstFridayFormatted($format);
             } else {
                 return $this->_firstFridayStamp();
