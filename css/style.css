@@ -20,7 +20,11 @@ a { color: #981B1E; }
 
 .site-title {
     display: inline-block;
-    margin: 0 ;
+    margin: 0;
+}
+
+.site-title a {
+    display: inline-block;
 }
 
 .definition {
