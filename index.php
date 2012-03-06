@@ -35,9 +35,7 @@
             <div class="container">
                 <h1 class="site-title span4">
                     <a href="#">
-                        <span class="hide-text">
-                            PHX2600 - The Phoenix, Arizona Network of Hackers
-                        </span>
+                        <img src="img/phx2600_logo.png" width="214" height="40" alt="PHX2600 - The Phoenix, Arizona Network of Hackers" title="PHX2600 - The Phoenix, Arizona Network of Hackers" />
                     </a>
                 </h1>
                 

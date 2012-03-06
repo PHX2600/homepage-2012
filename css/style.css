@@ -23,13 +23,6 @@ a { color: #981B1E; }
     margin: 0 ;
 }
 
-.site-title a {
-    background: transparent url(../img/phx2600_logo.png) no-repeat center center;
-    display: block;
-    height: 40px;
-    width: 214px;
-}
-
 .definition {
     border-top: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
