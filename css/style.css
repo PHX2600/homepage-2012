@@ -153,8 +153,10 @@ a { color: #981B1E; }
 }
 
 .feed-list {
-    margin: 0 0 1em;
-    padding: 0;
+    height: 250px;
+    margin: 5px 0 0;
+    overflow-y: scroll;
+    padding: 0 5px 0 0;
 }
 
 .feed-list li {
