@@ -2,13 +2,9 @@
 /* -----| GENERAL |---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-body {
-    padding-top: 75px;
-}
+body { padding: 75px 0 20px; }
 
-a {
-    color: #981B1E;
-}
+a { color: #981B1E; }
 
 
 /* -------------------------------------------------------------------------- */
@@ -103,8 +99,55 @@ a {
     -webkit-border-radius: 10px;
 }
 
-.feeds h3 {
+#feeds h3 {
     border-bottom: 1px dotted #333;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| MEETING INFO |----------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#next-meeting {
+    padding: 15px;
+    text-align: center;
+}
+
+#next-meeting .meeting-month,
+#next-meeting .meeting-day,
+#next-meeting .meeting-year {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px #999;
+    color: #333;
+    display: inline-block;
+    font-size: 6em;
+    font-weight: bold;
+    margin: 5px;
+    position: relative;
+    -moz-border-radius: 8px;
+    -moz-box-shadow: 0px 2px 4px #999;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: 0px 2px 4px #999;
+}
+
+#next-meeting .number {
+    padding: 48px 38px;
+}
+
+#next-meeting .midLine {
+    background-color: #333;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+#next-meeting p {
+    font-size: 1.4em;
+    line-height: 1.5em;
+    margin: 1em 0;
+    text-align: center;
 }
 
 
@@ -112,8 +155,12 @@ a {
 /* -----| FEED LISTS |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
+#forum-feed h3 {
+    border-bottom: 1px dotted #333;
+}
+
 .feed-list {
-    margin: 0;
+    margin: 0 0 1em;
     padding: 0;
 }
 
@@ -137,7 +184,7 @@ a {
 .feed-list .feed-title {
     color: #981B1E;
     display: block;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -148,49 +195,49 @@ a {
 
 
 /* -------------------------------------------------------------------------- */
-/* -----| MEETING INFO |----------------------------------------------------- */
+/* -----| GUIDELINES |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-.next-meeting {
-    padding: 15px;
-    text-align: center;
+#meeting-guidelines {
+
 }
 
-.next-meeting .meeting-month,
-.next-meeting .meeting-day,
-.next-meeting .meeting-year {
-    background-color: #FFF;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px #999;
-    color: #333;
-    display: inline-block;
-    font-size: 6em;
-    font-weight: bold;
-    margin: 5px;
-    position: relative;
-    -moz-border-radius: 8px;
-    -moz-box-shadow: 0px 2px 4px #999;
-    -webkit-border-radius: 8px;
-    -webkit-box-shadow: 0px 2px 4px #999;
+#meeting-guidelines h3 {
+    border-bottom: 1px dotted #000;
 }
 
-.next-meeting .number {
-    padding: 48px 38px;
-}
-
-.next-meeting .midLine {
-    background-color: #333;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-}
-
-.next-meeting p {
-    font-size: 1.4em;
-    line-height: 1.5em;
+#meeting-guidelines h4 {
     margin: 1em 0;
+}
+
+#meeting-guidelines ul,
+#meeting-guidelines ol {
+    margin: 1em 0 1em 40px !important;
+}
+
+#meeting-guidelines ul li,
+#meeting-guidelines ol li {
+    margin: .5em 0;
+}
+
+#meeting-guidelines .note p {
+    font-size: .85em;
+    margin: .5em 0;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| FOOTER |----------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#footer {
+    color: #ACACAC;
     text-align: center;
+}
+
+#footer a {
+    color: #ACACAC;
+    text-decoration: underline;
 }
 
 
@@ -200,6 +247,7 @@ a {
 
 .alert {
     margin: 10px 0;
+    text-align: center;
 }
 
 .alert a {

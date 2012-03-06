@@ -76,31 +76,35 @@
             </div>
         <?php endif; ?>
         
-        <div class="next-meeting well">
-            <p>The next meeting witll be held at 6:00 PM on</p>                
+        <div class="row">
+            
+            <div class="span8">
+                
+                <div id="next-meeting" class="well">
+                    <p>The next meeting witll be held at 6:00 PM on</p>                
+                            
+                    <div class="clearfix">
+                        <div class="meeting-month">
+                            <div class="number"><?php echo $ff->firstFriday('M'); ?></div>
+                            <div class="midLine"></div>
+                        </div>
+                        <div class="meeting-day">
+                            <div class="number"><?php echo $ff->firstFriday('d'); ?></div>
+                            <div class="midLine"></div>
+                        </div>
+                        <div class="meeting-year">
+                            <div class="number"><?php echo $ff->firstFriday('Y'); ?></div>
+                            <div class="midLine"></div>
+                        </div>
+                    </div>
                     
-            <div class="clearfix">
-                <div class="meeting-month">
-                    <div class="number"><?php echo $ff->firstFriday('M'); ?></div>
-                    <div class="midLine"></div>
+                    <p>at <a href="#mapModal" data-toggle="modal">Citizen Espresso Bar</a></p>
+                        
                 </div>
-                <div class="meeting-day">
-                    <div class="number"><?php echo $ff->firstFriday('d'); ?></div>
-                    <div class="midLine"></div>
-                </div>
-                <div class="meeting-year">
-                    <div class="number"><?php echo $ff->firstFriday('Y'); ?></div>
-                    <div class="midLine"></div>
-                </div>
+
             </div>
             
-            <p>at <a href="#mapModal" data-toggle="modal">Lola Coffee</a></p>
-                
-        </div>
-            
-        <div class="feeds row">
-        
-            <div class="span7">
+            <div id="forum-feed" class="span4 pull-right">
                 
                 <h3>Latest Forum Topics</h3>
                 
@@ -121,31 +125,80 @@
                     
                 ?>
                 
-                <ul class="forum-feed feed-list">
-                    <?php foreach ($feed->get_items() as $item): ?>
+                <ul class="feed-list">
+                    <?php $x = 1; foreach ($feed->get_items() as $item): ?>
+                        <?php if ($x <= 5): ?>
                         <li>
                             <a href="<?php echo $item->get_permalink(); ?>">
                                 <span class="feed-title"><?php echo $item->get_title(); ?></span>
                                 <small>Posted by <?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('F j, Y - g:i a'); ?></small>
                             </a>
                         </li>
-                    <?php endforeach; ?>
+                        <?php endif; ?>
+                    <?php $x++; endforeach; ?>
                 </ul>
                 
             </div>
             
-            <div class="span5">
-                
-                <h3>Twitter Feed</h3>
-                
-                <ul class="twitter-feed feed-list">
-                    <li>Tweet</li>
-                    <li>Tweet</li>
-                    <li>Tweet</li>
-                </ul>
+        </div>
+        
+        <div id="meeting-guidelines" class="row">
+            
+            <div class="span12">
+            
+                <h3>Meeting Guidelines</h3>
                 
             </div>
+            
+            <div class="span6">
+                
+                <h4>Official 2600 Guidelines:</h4>
+                
+                <p><small>These rules are taken directly from the main 2600 website.</small></p>
+                
+                <ol>
+                    <li class="rules">We meet in a public area. Nobody is excluded. We have nothing to hide and we don't presume to judge who is worthy of attending and who is not. If law enforcement harasses us, it will backfire as it did at the infamous Washington DC meeting in 11/92. (You can find more information on this event in the Secret Service section of our web site.)</li>
+                    <li class="rules">We act in a responsible manner. We don't do illegal things and we don't cause problems for the place we're meeting in. *Most* 2600 meetings are welcomed by the establishments we choose.</li>
+                    <li class="rules">We meet on the first Friday of the month between 5 pm and 8 pm local time. While there will always be people who can't make this particular time, the same will hold true for *any* time or day chosen. By having all of the meetings on the same day, it makes it very easy to remember, opens up the possibility for inter-meeting communication, and really causes hell for the federal agencies who want to monitor everything we do. (A few meetings have slight variations on the meeting time - these are noted accordingly.)</li>
+                    <li class="rules">While meetings are not limited to big cities, most of them take place in large metropolitan areas that are easily accessible.While it's convenient to have a meeting in your home town, we encourage people to go to meetings where they'll meet people from as wide an area as possible. So if there's a meeting within an hour or two of your town, go to that one rather than have two smaller meetings fairly close to each other. You always have the opportunity to get together with "home town hackers" any time you want.</li>
+                    <li class="rules">All meetings *must* contact us to let us know how things are going even if nothing unusual is happening. If we don't hear from your city on a regular basis, we'll have to stop publicizing the site since telling people to go to where no meeting is really doesn't do anyone a service. You can email us at meetings@2600.com or call us at (631) 751-2600. We also need a way of getting back in touch with you.</li>
+                </ol>
+                
+                <p>Anyone can have meetings and set whatever rules they wish. However, if they're going to be affiliated with 2600, we ask that these few guidelines be observed. Thanks.</p>
+            
+            </div>
+            
+            <div class="span6">
+                    
+                <h4>PHX2600 Specific Rules:</h4>
+                
+                <p>Over time our Phoenix meetings have built a reputation of being a very positive environment where no one will get "flamed" by someone that is super "1337." If you think you're better or smarter than someone, keep your arrogance to yourself, but not the knowledge. I'd like to continue to see such a friendly hacker environment and learn even more from it as well.</p>
+                
+                <h4>Projects &amp; Presentations</h4>
+                
+                <ul>
+                    <li>There is rarely any planed schedule for the meetings, anyone who is prepared and wishes to give a presentation or show off a project may at any time during a meeting. Also, no one will be forced to give a presentation at any point, ever.</li>
+                </ul>
+
+                <h4>2550 Meetings (2600 Hangouts)</h4>
+                <ul>
+                    <li>2550 meetings (2600 hangouts) are unofficial meetings where a few or more of us from the group get together and just hang out (be it a movie, meal, hack night, etc.). 2550 meetings are rarely planned and usually quite spontaneous but usually announced via PHX2600 public channels (on the forum, via Twitter, etc.).</li>
+                </ul>
+                
+                <div class="note well">
+                    <h5>NOTE TO ANYONE INTERESTED IN STARTING A NEW MEETING:</h5>
+                    <p>If you've read the above guidelines and you're interested in starting a meeting, please do the following: Advertise the meeting place in your community - BBS's are one good way of getting the word out. Post meeting info on the usenet newsgroup alt.2600. Send us email (meetings@2600.com) telling us how your meetings are going after each meeting. We cannot publicize the meetings in 2600 until they have become established and it's up to you to get the word out in your community. Good luck!</p>
+                    <p>IRC USERS: Connect to irc.2600.net and go to the channel for your state or country in order to find other people in your area. Use your state's two letter abbreviation followed by 2600 in order to find the right channel (#md2600, #ct2600, etc.) If you're outside the United States, put your two letter Internet country code after the 2600 (#2600au, #2600dk). For example, California and Canada use the same two letter abbreviation (CA). The California channel would be #ca2600 while the Canadian channel would be #2600ca. Other channels may exist for specific meetings within these areas - they should be referenced in the main state or country channels so people can find them. All 2600 channels, like the meetings, are open to all.</p>
+                </div>
+                
+            </div>
+
+        </div>
         
+        <hr/>
+        
+        <div id="footer">
+            &copy; <?php echo date('Y'); ?> <a href="https://www.phx2600.org">PHX2600</a>
         </div>
         
     </div>
@@ -153,7 +206,7 @@
     <div id="mapModal" class="modal fade hide">
         <div class="modal-header">
             <a class="close" data-dismiss="modal">×</a>
-            <h3>Lola Coffee</h3>
+            <h3>Citizen Espresso Bar</h3>
         </div>
         <div class="modal-body">
             <iframe width="530" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=lola+coffee,+phoenix,+az&amp;hl=en&amp;ie=UTF8&amp;view=map&amp;cid=17466708338773990751&amp;t=m&amp;ll=33.511558,-112.073679&amp;spn=0.012881,0.022745&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
