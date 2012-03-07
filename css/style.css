@@ -177,6 +177,11 @@ a { color: #981B1E; }
     border-bottom: 1px solid #DDD;
 }
 
+#forum-feed .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
 .feed-list {
     margin: 0;
     padding: 0;

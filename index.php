@@ -104,30 +104,33 @@
             
             <div id="forum-feed" class="span4 pull-right">
                 
-                <?php
-                    
-                    // Fetch the fee URL
-                    $feed->set_feed_url('https://www.phx2600.org/forum/feed.php?mode=topics');
-                    
-                    // Run SimplePie.
-                    $feed->init();
-                    
-                    // Make sure the content is sent to the browser as text/html
-                    // and the UTF-8 character set (since we didn't change it).
-                    $feed->handle_content_type();
-                    
-                ?>
-                
                 <div class="tabbable">
                     
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#latest-topics">Latest Topics</a></li>
-                        <li class=""><a data-toggle="tab" href="#active-topics">Active Topics</a></li>
+                        <li class="active"><a href="#latest-topics" data-toggle="tab">Latest Topics</a></li>
+                        <li><a href="#active-topics" data-toggle="tab">Active Topics</a></li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                More <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#other" data-toggle="tab">Other</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     
                     <div class="tab-content">
                         
                         <div id="latest-topics" class="tab-pane active">
+                            
+                            <?php
+                                // Fetch the feed and run SimplePie then make sure the content is
+                                // sent to the browser as text/html and the UTF-8 character set
+                                $feed->set_feed_url('https://www.phx2600.org/forum/feed.php?mode=topics');
+                                $feed->init();
+                                $feed->handle_content_type();
+                            ?>
+                            
                             <ul class="feed-list">
                                 <?php $x = 1; foreach ($feed->get_items() as $item): ?>
                                     
@@ -139,11 +142,36 @@
                                     </li>
                                 <?php $x++; endforeach; ?>
                             </ul>
+                            
                         </div>
                         
-                      <div id="active-topics" class="tab-pane">
-                        <p>Howdy, I'm in Section 2.</p>
-                      </div>
+                        <div id="active-topics" class="tab-pane">
+                            
+                            <?php
+                                // Fetch the feed and run SimplePie then make sure the content is
+                                // sent to the browser as text/html and the UTF-8 character set
+                                $feed->set_feed_url('https://www.phx2600.org/forum/feed.php?mode=topics_active');
+                                $feed->init();
+                                $feed->handle_content_type();
+                            ?>
+                            
+                            <ul class="feed-list">
+                                <?php $x = 1; foreach ($feed->get_items() as $item): ?>
+                                    
+                                    <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
+                                        <a href="<?php echo $item->get_permalink(); ?>">
+                                            <span class="feed-title"><?php echo $item->get_title(); ?></span>
+                                            <small><?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('M j, Y - g:i a'); ?></small>
+                                        </a>
+                                    </li>
+                                <?php $x++; endforeach; ?>
+                            </ul>
+                            
+                        </div>
+                        
+                        <div id="other" class="tab-pane">
+                            <p>This is a third tab.</p>
+                        </div>
                       
                     </div>
                     
