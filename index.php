@@ -137,12 +137,34 @@
             </div>
             
         </div>
+                
+        <div id="info-boxes" class="row">
+            
+            <div class="info-box span4">
+                <h4>Info Box Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique, lorem quis pulvinar blandit, neque nulla lobortis mi, in semper ligula ante non odio. Vestibulum sit amet ipsum quis nunc molestie semper. Curabitur vitae augue nisl, eu cursus sapien. Morbi tincidunt luctus eros, vitae gravida ante eleifend eu.</p>
+            </div>
+            
+            <div class="info-box span4">
+                <h4>Info Box Title</h4>
+                <p>Nulla congue diam elementum diam suscipit egestas lobortis in lorem. Morbi at elit non nisl mollis ultricies et sit amet nunc. Mauris quis purus turpis. Integer aliquet blandit augue, a gravida ipsum porta ut. Nullam malesuada leo ligula, sit amet vestibulum orci. Maecenas placerat volutpat metus, sit amet viverra urna tristique in.</p>
+            </div>
+            
+            <div class="info-box span4">
+                <h4>Info Box Title</h4>
+                <p>Curabitur hendrerit, orci nec lacinia bibendum, erat metus facilisis lorem, id scelerisque turpis risus vel metus. Curabitur sit amet dolor eget odio eleifend tristique. Donec lacus metus, iaculis at lacinia eu, sagittis in nunc. Duis molestie mollis consequat. Quisque lacinia libero massa, nec fermentum turpis.</p>
+            </div>
+            
+        </div>
         
-        <h3 class="section-title">Meeting Guidelines</h3>
         
         <div id="meeting-guidelines" class="row">
             
-            <div class="span6">
+            <div class="span12">
+                <h3 class="section-title">Meeting Guidelines</h3>
+            </div>
+            
+            <div class="guidelines span6">
                 
                 <h4>Official 2600 Guidelines:</h4>
                 
@@ -160,7 +182,7 @@
             
             </div>
             
-            <div class="span6">
+            <div class="guidelines span6">
                     
                 <h4>PHX2600 Specific Rules:</h4>
                 

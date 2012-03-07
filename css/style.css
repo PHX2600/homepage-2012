@@ -104,6 +104,7 @@ a { color: #981B1E; }
     background-color: #121212;
     border-radius: 3px;
     color: #FFF;
+    margin-bottom: 1em;
     padding: 3px 8px;
 }
 
@@ -166,7 +167,7 @@ a { color: #981B1E; }
 
 .feed-list {
     height: 250px;
-    margin: 5px 0 0;
+    margin: 5px 0 20px;
     overflow-y: scroll;
     padding: 0 5px 0 0;
 }
@@ -202,6 +203,20 @@ a { color: #981B1E; }
 
 
 /* -------------------------------------------------------------------------- */
+/* -----| INFO BOXES |------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#info-boxes h4 {
+    border-bottom: 1px dotted #333;
+    margin-bottom: .5em;
+}
+
+.info-box {
+    margin-bottom: 20px;
+}
+
+
+/* -------------------------------------------------------------------------- */
 /* -----| GUIDELINES |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
@@ -209,9 +224,13 @@ a { color: #981B1E; }
     /* NULL */
 }
 
+.guidelines  {
+    margin-bottom: 20px;
+}
+
 #meeting-guidelines h4 {
     border-bottom: 1px dotted #333;
-    margin: 1em 0;
+    margin: 0 0 .5em;
 }
 
 #meeting-guidelines ul,
