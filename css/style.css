@@ -165,11 +165,21 @@ a { color: #981B1E; }
     border-bottom: 1px dotted #333;
 }
 
-.feed-list {
-    height: 250px;
-    margin: 5px 0 20px;
+#forum-feed .nav {
+    margin-bottom: 0 !important;
+}
+
+#forum-feed .tab-content {
+    height: 248px;
     overflow-y: auto;
+    margin-bottom: 20px;
     padding: 0 5px 0 0;
+    border-bottom: 1px solid #DDD;
+}
+
+.feed-list {
+    margin: 0;
+    padding: 0;
 }
 
 .feed-list li {

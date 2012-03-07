@@ -104,8 +104,6 @@
             
             <div id="forum-feed" class="span4 pull-right">
                 
-                <h3>Latest Forum Topics</h3>
-                
                 <?php
                     
                     // Fetch the fee URL
@@ -120,16 +118,35 @@
                     
                 ?>
                 
-                <ul class="feed-list">
-                    <?php $x = 1; foreach ($feed->get_items() as $item): ?>
-                        <li>
-                            <a href="<?php echo $item->get_permalink(); ?>">
-                                <span class="feed-title"><?php echo $item->get_title(); ?></span>
-                                <small><?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('M j, Y - g:i a'); ?></small>
-                            </a>
-                        </li>
-                    <?php $x++; endforeach; ?>
-                </ul>
+                <div class="tabbable">
+                    
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#latest-topics">Latest Topics</a></li>
+                        <li class=""><a data-toggle="tab" href="#active-topics">Active Topics</a></li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        
+                        <div id="latest-topics" class="tab-pane active">
+                            <ul class="feed-list">
+                                <?php $x = 1; foreach ($feed->get_items() as $item): ?>
+                                    <li>
+                                        <a href="<?php echo $item->get_permalink(); ?>">
+                                            <span class="feed-title"><?php echo $item->get_title(); ?></span>
+                                            <small><?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('M j, Y - g:i a'); ?></small>
+                                        </a>
+                                    </li>
+                                <?php $x++; endforeach; ?>
+                            </ul>
+                        </div>
+                        
+                      <div id="active-topics" class="tab-pane">
+                        <p>Howdy, I'm in Section 2.</p>
+                      </div>
+                      
+                    </div>
+                    
+                </div>
                 
             </div>
             
