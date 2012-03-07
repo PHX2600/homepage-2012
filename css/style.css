@@ -213,6 +213,7 @@ a { color: #981B1E; }
 
 .info-box {
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 
@@ -226,6 +227,7 @@ a { color: #981B1E; }
 
 .guidelines  {
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 #meeting-guidelines h4 {

@@ -141,18 +141,19 @@
         <div id="info-boxes" class="row">
             
             <div class="info-box span4">
-                <h4>Info Box Title</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique, lorem quis pulvinar blandit, neque nulla lobortis mi, in semper ligula ante non odio. Vestibulum sit amet ipsum quis nunc molestie semper. Curabitur vitae augue nisl, eu cursus sapien. Morbi tincidunt luctus eros, vitae gravida ante eleifend eu.</p>
+                <h4>The Phoenix, Arizona Netowrk of Hackers</h4>
+                <p>The PHX2600 is a local group of hackers and technology enthusiasts that meet on a monthly basis to discuss all things code, tech or otherwise hacker related.</p>
             </div>
             
             <div class="info-box span4">
-                <h4>Info Box Title</h4>
-                <p>Nulla congue diam elementum diam suscipit egestas lobortis in lorem. Morbi at elit non nisl mollis ultricies et sit amet nunc. Mauris quis purus turpis. Integer aliquet blandit augue, a gravida ipsum porta ut. Nullam malesuada leo ligula, sit amet vestibulum orci. Maecenas placerat volutpat metus, sit amet viverra urna tristique in.</p>
+                <h4>Meeting Info</h4>
+                <p>Meetings are held on the first Friday of every month starting at 6PM at the location listed above. There is rarely any planed schedule for the meetings, anyone who is prepared and wishes to give a presentation or show off a project may do so at any time during a meeting. All meetings are open to the public so feel free to drop by.</p>
             </div>
             
             <div class="info-box span4">
-                <h4>Info Box Title</h4>
-                <p>Curabitur hendrerit, orci nec lacinia bibendum, erat metus facilisis lorem, id scelerisque turpis risus vel metus. Curabitur sit amet dolor eget odio eleifend tristique. Donec lacus metus, iaculis at lacinia eu, sagittis in nunc. Duis molestie mollis consequat. Quisque lacinia libero massa, nec fermentum turpis.</p>
+                <h4>News and Updates</h4>
+                <p>You can follow PHX2600 on Twitter or Google+ for miscellaneous news, meeting reminders and more.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn">Follow on Twitter</a> <a class="btn">Follow on Google+</a></p>
             </div>
             
         </div>
