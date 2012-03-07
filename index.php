@@ -138,13 +138,9 @@
             
         </div>
         
+        <h3 class="section-title">Meeting Guidelines</h3>
+        
         <div id="meeting-guidelines" class="row">
-            
-            <div class="span12">
-            
-                <h3>Meeting Guidelines</h3>
-                
-            </div>
             
             <div class="span6">
                 

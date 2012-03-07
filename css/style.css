@@ -96,9 +96,13 @@ a { color: #981B1E; }
     -webkit-border-radius: 10px;
 }
 
-#feeds h3 {
-    border-bottom: 1px dotted #333;
+.section-title {
+    background-color: #121212;
+    border-radius: 3px;
+    color: #FFF;
+    padding: 3px 8px;
 }
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -199,13 +203,6 @@ a { color: #981B1E; }
 
 #meeting-guidelines {
     /* NULL */
-}
-
-#meeting-guidelines h3 {
-    background-color: #121212;
-    border-radius: 3px;
-    color: #FFF;
-    padding: 3px 8px;
 }
 
 #meeting-guidelines h4 {
