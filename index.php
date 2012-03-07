@@ -24,8 +24,8 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
 <body>
@@ -150,10 +150,11 @@
             <div class="info-box span4">
                 <h4>News and Updates</h4>
                 <p>You can follow PHX2600 on Twitter or Google+ for miscellaneous news, meeting reminders and more.</p>
+                <br/>
                 <center>
                     <p>
-                        <a href="https://twitter.com/#!/PHX2600"><img src="img/twitter_48.png" width="48" height="48" title="Follow PHX2600 on Twitter" alt="Twitter" /></a>
-                        <a href="https://plus.google.com/117910250839532154362/posts"><img src="img/google_plus_48.png" width="48" height="48" title="Follow PHX2600 on Google+" alt="Google+" /></a>
+                        <a href="https://twitter.com/#!/PHX2600" title="Follow PHX2600 on Twitter" class="social-link twitter">Twitter</a>
+                        <a href="https://plus.google.com/117910250839532154362/posts" title="Follow PHX2600 on Google+" class="social-link google">Google+</a>
                     </p>
                 </center>
             </div>

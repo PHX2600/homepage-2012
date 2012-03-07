@@ -216,6 +216,25 @@ a { color: #981B1E; }
     text-align: justify;
 }
 
+.social-link {
+    color: #FFF;
+    font-size: 1.2em;
+    padding: 6px 10px 6px 38px;
+}
+
+.social-link.twitter {
+    background: #46C8F5 url(../img/twitter_32.png) no-repeat left center;
+}
+
+.social-link.google {
+    background: #DD4C39 url(../img/google_plus_32.png) no-repeat left center;
+}
+
+.social-link:hover {
+    color: #FFF;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 /* -------------------------------------------------------------------------- */
 /* -----| GUIDELINES |------------------------------------------------------- */
