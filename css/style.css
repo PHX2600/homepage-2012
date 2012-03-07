@@ -170,10 +170,10 @@ a { color: #981B1E; }
 }
 
 #forum-feed .tab-content {
-    height: 248px;
+    height: 238px;
     overflow-y: auto;
     margin-bottom: 20px;
-    padding: 0 5px 0 0;
+    padding: 5px 5px 5px 0;
     border-bottom: 1px solid #DDD;
 }
 
@@ -183,10 +183,17 @@ a { color: #981B1E; }
 }
 
 .feed-list li {
-    border-bottom: 1px solid #DEDEDE;
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.feed-list li.odd {
+    background-color: #F3F3F3;
+}
+
+.feed-list li.even {
+    background-color: #FFF;
 }
 
 .feed-list li a {
@@ -195,7 +202,7 @@ a { color: #981B1E; }
 }
 
 .feed-list li a:hover {
-    background-color: #F3F3F3;
+    background-color: #E3E3E3;
     text-decoration: none;
 }
 

@@ -130,7 +130,8 @@
                         <div id="latest-topics" class="tab-pane active">
                             <ul class="feed-list">
                                 <?php $x = 1; foreach ($feed->get_items() as $item): ?>
-                                    <li>
+                                    
+                                    <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
                                         <a href="<?php echo $item->get_permalink(); ?>">
                                             <span class="feed-title"><?php echo $item->get_title(); ?></span>
                                             <small><?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('M j, Y - g:i a'); ?></small>
