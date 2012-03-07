@@ -198,14 +198,18 @@ a { color: #981B1E; }
 /* -------------------------------------------------------------------------- */
 
 #meeting-guidelines {
-
+    /* NULL */
 }
 
 #meeting-guidelines h3 {
-    border-bottom: 1px dotted #000;
+    background-color: #121212;
+    border-radius: 3px;
+    color: #FFF;
+    padding: 3px 8px;
 }
 
 #meeting-guidelines h4 {
+    border-bottom: 1px dotted #333;
     margin: 1em 0;
 }
 

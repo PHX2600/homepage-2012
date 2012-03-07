@@ -170,19 +170,19 @@
                 
                 <p>Over time our Phoenix meetings have built a reputation of being a very positive environment where no one will get "flamed" by someone that is super "1337." If you think you're better or smarter than someone, keep your arrogance to yourself, but not the knowledge. I'd like to continue to see such a friendly hacker environment and learn even more from it as well.</p>
                 
-                <h4>Projects &amp; Presentations</h4>
+                <h5>Projects &amp; Presentations</h5>
                 
                 <ul>
                     <li>There is rarely any planed schedule for the meetings, anyone who is prepared and wishes to give a presentation or show off a project may at any time during a meeting. Also, no one will be forced to give a presentation at any point, ever.</li>
                 </ul>
 
-                <h4>2550 Meetings (2600 Hangouts)</h4>
+                <h5>2550 Meetings (2600 Hangouts)</h5>
                 <ul>
                     <li>2550 meetings (2600 hangouts) are unofficial meetings where a few or more of us from the group get together and just hang out (be it a movie, meal, hack night, etc.). 2550 meetings are rarely planned and usually quite spontaneous but usually announced via PHX2600 public channels (on the forum, via Twitter, etc.).</li>
                 </ul>
                 
                 <div class="note well">
-                    <h5>NOTE TO ANYONE INTERESTED IN STARTING A NEW MEETING:</h5>
+                    <h5>Note to anyone interested in starting a new meeting:</h5>
                     <p>If you've read the above guidelines and you're interested in starting a meeting, please do the following: Advertise the meeting place in your community - BBS's are one good way of getting the word out. Post meeting info on the usenet newsgroup alt.2600. Send us email (meetings@2600.com) telling us how your meetings are going after each meeting. We cannot publicize the meetings in 2600 until they have become established and it's up to you to get the word out in your community. Good luck!</p>
                     <p>IRC USERS: Connect to irc.2600.net and go to the channel for your state or country in order to find other people in your area. Use your state's two letter abbreviation followed by 2600 in order to find the right channel (#md2600, #ct2600, etc.) If you're outside the United States, put your two letter Internet country code after the 2600 (#2600au, #2600dk). For example, California and Canada use the same two letter abbreviation (CA). The California channel would be #ca2600 while the Canadian channel would be #2600ca. Other channels may exist for specific meetings within these areas - they should be referenced in the main state or country channels so people can find them. All 2600 channels, like the meetings, are open to all.</p>
                 </div>
