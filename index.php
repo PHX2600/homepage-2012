@@ -150,7 +150,12 @@
             <div class="info-box span4">
                 <h4>News and Updates</h4>
                 <p>You can follow PHX2600 on Twitter or Google+ for miscellaneous news, meeting reminders and more.</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn">Follow on Twitter</a> <a class="btn">Follow on Google+</a></p>
+                <p>
+                    <center>
+                        <a href="https://twitter.com/#!/PHX2600"><img src="img/twitter_48.png" width="48" height="48" title="Follow PHX2600 on Twitter" alt="Twitter" /></a>
+                        <a href="https://plus.google.com/117910250839532154362/posts"><img src="img/google_plus_48.png" width="48" height="48" title="Follow PHX2600 on Google+" alt="Google+" /></a>
+                    </center>
+                </p>
             </div>
             
         </div>
