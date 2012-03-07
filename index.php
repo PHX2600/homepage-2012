@@ -30,10 +30,10 @@
 
 <body>
     
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar">
         <div class="header">
             <div class="container">
-                <h1 class="site-title span4">
+                <h1 class="site-title">
                     <a href="#">
                         <img src="img/phx2600_logo.png" width="214" height="40" alt="PHX2600 - The Phoenix, Arizona Network of Hackers" title="PHX2600 - The Phoenix, Arizona Network of Hackers" />
                     </a>
