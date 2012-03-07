@@ -111,9 +111,6 @@
                     // Fetch the fee URL
                     $feed->set_feed_url('https://www.phx2600.org/forum/feed.php?mode=topics');
                     
-                    // Limit number of items retrieved
-                    $feed->set_item_limit(5);
-                    
                     // Run SimplePie.
                     $feed->init();
                     
@@ -128,7 +125,7 @@
                         <li>
                             <a href="<?php echo $item->get_permalink(); ?>">
                                 <span class="feed-title"><?php echo $item->get_title(); ?></span>
-                                <small>Posted by <?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('F j, Y - g:i a'); ?></small>
+                                <small><?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('M j, Y - g:i a'); ?></small>
                             </a>
                         </li>
                     <?php $x++; endforeach; ?>
