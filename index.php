@@ -109,6 +109,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#latest-topics" data-toggle="tab">Latest Topics</a></li>
                         <li><a href="#active-topics" data-toggle="tab">Active Topics</a></li>
+                        <?php /*
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                                 More <b class="caret"></b>
@@ -117,6 +118,7 @@
                                 <li><a href="#other" data-toggle="tab">Other</a></li>
                             </ul>
                         </li>
+                        */ ?>
                     </ul>
                     
                     <div class="tab-content">
@@ -155,17 +157,27 @@
                                 $feed->handle_content_type();
                             ?>
                             
-                            <ul class="feed-list">
-                                <?php $x = 1; foreach ($feed->get_items() as $item): ?>
-                                    
-                                    <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
-                                        <a href="<?php echo $item->get_permalink(); ?>">
-                                            <span class="feed-title"><?php echo $item->get_title(); ?></span>
-                                            <small><?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('M j, Y - g:i a'); ?></small>
-                                        </a>
-                                    </li>
-                                <?php $x++; endforeach; ?>
-                            </ul>
+                            <?php if (count($feed->get_items()) == 0): ?>
+                                
+                                <div class="alert alert-error">
+                                    No currently active topics.
+                                </div>
+                                
+                            <?php else: ?>
+                            
+                                <ul class="feed-list">
+                                    <?php $x = 1; foreach ($feed->get_items() as $item): ?>
+                                        
+                                        <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
+                                            <a href="<?php echo $item->get_permalink(); ?>">
+                                                <span class="feed-title"><?php echo $item->get_title(); ?></span>
+                                                <small><?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('M j, Y - g:i a'); ?></small>
+                                            </a>
+                                        </li>
+                                    <?php $x++; endforeach; ?>
+                                </ul>
+                                
+                            <?php endif; ?>
                             
                         </div>
                         
