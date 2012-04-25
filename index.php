@@ -41,13 +41,13 @@
                 
                 <ul class="site-navigation pull-right">
                     <li class="active">
-                        <a href="#"><i class="icon-home icon-white"></i> Home</a>
+                        <a href="/"><i class="icon-home icon-white"></i> Home</a>
                     </li>
                     <li>
-                        <a href="#"><i class="icon-th-list icon-white"></i> Forum</a>
+                        <a href="/forum"><i class="icon-th-list icon-white"></i> Forum</a>
                     </li>
                     <li>
-                        <a href="#"><i class="icon-download-alt icon-white"></i> Archive</a>
+                        <a href="/archive"><i class="icon-download-alt icon-white"></i> Archive</a>
                     </li>
                 </ul>
             </div>
