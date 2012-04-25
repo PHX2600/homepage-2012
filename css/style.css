@@ -68,7 +68,12 @@ a { color: #981B1E; }
 }
 
 .site-navigation li a:hover {
-    color: #FFF;
+    color: #333;
+    background-color: #FFF;
+}
+
+.site-navigation li a:hover i {
+    background-image: url(../img/glyphicons-halflings.png);
 }
 
 .site-navigation li a i {

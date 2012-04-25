@@ -47,7 +47,7 @@
                         <a href="#"><i class="icon-th-list icon-white"></i> Forum</a>
                     </li>
                     <li>
-                        <a href="#"><i class="icon-download-alt icon-white"></i> Archives</a>
+                        <a href="#"><i class="icon-download-alt icon-white"></i> Archive</a>
                     </li>
                 </ul>
             </div>
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     
-                    <p>at <a href="#mapModal" data-toggle="modal">Citizen Espresso Bar</a></p>
+                    <p>at <a href="#mapModal" data-toggle="modal">Bookmans Entertainment Exchange</a></p>
                         
                 </div>
 
@@ -282,10 +282,10 @@
     <div id="mapModal" class="modal fade hide">
         <div class="modal-header">
             <a class="close" data-dismiss="modal">×</a>
-            <h3>Citizen Espresso Bar</h3>
+            <h3>Bookmans Entertainment Exchange</h3>
         </div>
         <div class="modal-body">
-            <iframe width="530" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=lola+coffee,+phoenix,+az&amp;hl=en&amp;ie=UTF8&amp;view=map&amp;cid=17466708338773990751&amp;t=m&amp;ll=33.511558,-112.073679&amp;spn=0.012881,0.022745&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+            <iframe width="530" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Bookmans+Entertainment+Exchange&amp;aq=&amp;sll=33.484717,-111.96579&amp;sspn=0.297796,0.676346&amp;ie=UTF8&amp;hq=Bookmans+Entertainment+Exchange&amp;hnear=&amp;t=m&amp;ll=33.396011,-111.841725&amp;spn=0.009316,0.021136&amp;z=14&amp;iwloc=A&amp;cid=6584790275915782619&amp;output=embed"></iframe>
         </div>
     </div>
     
