@@ -30,27 +30,25 @@
 
 <body>
     
-    <div class="navbar">
-        <div class="header">
-            <div class="container">
-                <h1 class="site-title">
-                    <a href="#">
-                        <img src="img/phx2600_logo.png" width="214" height="40" alt="PHX2600 - The Phoenix, Arizona Network of Hackers" title="PHX2600 - The Phoenix, Arizona Network of Hackers" />
-                    </a>
-                </h1>
-                
-                <ul class="site-navigation pull-right">
-                    <li class="active">
-                        <a href="/"><i class="icon-home icon-white"></i> Home</a>
-                    </li>
-                    <li>
-                        <a href="/forum"><i class="icon-th-list icon-white"></i> Forum</a>
-                    </li>
-                    <li>
-                        <a href="/archive"><i class="icon-download-alt icon-white"></i> Archive</a>
-                    </li>
-                </ul>
-            </div>
+    <div class="header">
+        <div class="container">
+            <h1 class="site-title">
+                <a href="#">
+                    <img src="img/phx2600_logo.png" width="214" height="40" alt="PHX2600 - The Phoenix, Arizona Network of Hackers" title="PHX2600 - The Phoenix, Arizona Network of Hackers" />
+                </a>
+            </h1>
+            
+            <ul class="site-navigation pull-right">
+                <li class="active">
+                    <a href="/"><i class="icon-home icon-white"></i> Home</a>
+                </li>
+                <li>
+                    <a href="/forum"><i class="icon-th-list icon-white"></i> Forum</a>
+                </li>
+                <li>
+                    <a href="/archive"><i class="icon-download-alt icon-white"></i> Archive</a>
+                </li>
+            </ul>
         </div>
     </div>
     
