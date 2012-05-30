@@ -197,7 +197,7 @@
         <div id="info-boxes" class="row">
             
             <div class="info-box span4">
-                <h4>The Phoenix, Arizona Netowrk of Hackers</h4>
+                <h4>The Phoenix, Arizona Network of Hackers</h4>
                 <p>The PHX2600 is a local group of hackers and technology enthusiasts that meet on a monthly basis to discuss all things code, tech or otherwise hacker related. Most members enjoy exploring and exploting technology and life in an effort to better use and understand those systems.</p>
             </div>
             
