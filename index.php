@@ -274,7 +274,7 @@
             <h3>Citizen Espresso Bar</h3>
         </div>
         <div class="modal-body">
-            <iframe width="530" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lola+Coffee&amp;aq=&amp;sll=33.505511,-112.073486&amp;sspn=0.010395,0.015428&amp;ie=UTF8&amp;hq=Lola+Coffee&amp;hnear=&amp;t=m&amp;ll=33.510252,-112.079322&amp;spn=0.006441,0.011351&amp;z=16&amp;output=embed"></iframe>
+            <iframe width="530" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=201530905649472551260.0004c1434525ddca089c2&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=33.50764,-112.073979&amp;spn=0.006441,0.011351&amp;z=16&amp;iwloc=0004c1434c603ebab7cfa&amp;output=embed"></iframe>
         </div>
     </div>
     
