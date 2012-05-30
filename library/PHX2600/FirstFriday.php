@@ -9,7 +9,7 @@
      * @author Chris Kankiewicz (http://www.chriskankiewicz.com)
      * @copyright 2012 Chris Kankiewicz
      */
-    class FirstFriday {
+    class PHX2600_FirstFriday {
         
         // Define application version
         const VERSION = '1.2.0';

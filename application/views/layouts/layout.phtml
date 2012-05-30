@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>PHX2600 - The Phoenix, Arizona Network of Hackers</title>
+    
+    <link rel="shortcut icon" href="images/xhtml.png" />
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <? if($this->css): ?>
+        <? foreach ($this->css as $css): ?>
+            <link rel="stylesheet" type="text/css" href="<?= $css; ?>" />
+        <? endforeach; ?>
+    <? endif; ?>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <? if ($this->js): ?>
+        <? foreach ($this->js as $js): ?>
+            <script type="text/javascript" src="<?= $js; ?>"></script>
+        <? endforeach; ?>
+    <? endif; ?>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-967293-8']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="container">
+            <h1 class="site-title">
+                <a href="#">
+                    <img src="/img/phx2600_logo.png" width="214" height="40" alt="PHX2600 - The Phoenix, Arizona Network of Hackers" title="PHX2600 - The Phoenix, Arizona Network of Hackers" />
+                </a>
+            </h1>
+            
+            <ul class="site-navigation pull-right">
+                <li class="active">
+                    <a href="/"><i class="icon-home icon-white"></i> Home</a>
+                </li>
+                <li>
+                    <a href="/forum"><i class="icon-th-list icon-white"></i> Forum</a>
+                </li>
+                <li>
+                    <a href="/archive"><i class="icon-download-alt icon-white"></i> Archive</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container">
+        
+        <?= $this->layout()->content; ?>
+        
+        <hr/>
+        
+        <div id="footer">
+            &copy; <?php echo date('Y'); ?> <a href="https://www.phx2600.org">PHX2600</a>
+        </div>
+        
+    </div>
+    
+</body>
+
+<!-- Page by, Chris Kankiewicz <http://www.chriskankiewicz.com> -->
+
+</html>

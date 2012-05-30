@@ -1,0 +1,202 @@
+<div class="definition">
+    <strong>Hacker</strong> [hack·er] /n/ - One who seeks to understand the details of a system and strives to stretch it's capabilities beyond the original intent.
+</div>
+
+<?php if ($this->meetingTonight): ?>
+    <div class="alert alert-success">
+        <strong>Meeting tonight starting at 6pm!</strong>
+        Check the <a href="https://www.phx2600.org/forum/viewforum.php?f=2">Meeting Discussion</a> thread for more info.
+        <a class="close" data-dismiss="alert">×</a>
+    </div>
+<?php elseif ($this->meetingThisFriday): ?>
+    <div class="alert alert-info">
+        <strong>Meeting this Friday, <?php echo date('F j, Y', $this->ff); ?>.</strong>
+        Check the <a href="https://www.phx2600.org/forum/viewforum.php?f=2">Meeting Discussion</a> thread for more info.
+        <a class="close" data-dismiss="alert">×</a>
+    </div>
+<?php endif; ?>
+
+<div class="row">
+    
+    <div class="span8">
+        
+        <div id="next-meeting" class="well">
+            <p>The next meeting witll be held at 6:00 PM on</p>                
+                    
+            <div class="clearfix">
+                <div class="meeting-month">
+                    <div class="number"><?php echo date('M', $this->ff); ?></div>
+                    <div class="midLine"></div>
+                </div>
+                <div class="meeting-day">
+                    <div class="number"><?php echo date('d', $this->ff); ?></div>
+                    <div class="midLine"></div>
+                </div>
+                <div class="meeting-year">
+                    <div class="number"><?php echo date('Y', $this->ff); ?></div>
+                    <div class="midLine"></div>
+                </div>
+            </div>
+            
+            <p>at <a href="#mapModal" data-toggle="modal">Citizen Espresso Bar</a></p>
+                
+        </div>
+
+    </div>
+    
+    <div id="forum-feed" class="span4 pull-right">
+        
+        <div class="tabbable">
+            
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#latest-topics" data-toggle="tab">Latest Topics</a></li>
+                <li><a href="#twitter-feed" data-toggle="tab">Latest Tweets</a></li>
+                <?php /*
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        More <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#other" data-toggle="tab">Other</a></li>
+                    </ul>
+                </li>
+                */ ?>
+            </ul>
+            
+            <div class="tab-content">
+                
+                <div id="latest-topics" class="tab-pane active">
+                    
+                    <ul class="feed-list">
+                        <?php $x = 1; foreach ($this->forumFeed as $item): ?>
+                            
+                            <?php $date = new DateTime($item->published()); ?>
+                            
+                            <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
+                                <a href="<?php echo $item->link(); ?>">
+                                    <span class="feed-title"><?php echo $item->title(); ?></span>
+                                    <small><?php echo $item->author->name(); ?> on <?php echo date('M j, Y - g:i a', $date->getTimestamp()); ?></small>
+                                </a>
+                            </li>
+                        <?php $x++; endforeach; ?>
+                    </ul>
+                    
+                </div>
+                
+                <div id="twitter-feed" class="tab-pane">
+                    
+                    <ul class="feed-list">
+                        <?php $x = 1; foreach ($this->twitterFeed as $item): ?>
+                            
+                            <?php $date = new DateTime($item->pubDate()); ?>
+                            
+                            <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
+                                <a href="<?php echo $item->link(); ?>">
+                                    <span class="feed-text"><?php echo $item->description(); ?></span>
+                                    <small><?php echo date('M j, Y - g:i a', $date->getTimestamp()); ?></small>
+                                </a>
+                            </li>
+                        <?php $x++; endforeach; ?>
+                    </ul>
+                    
+                </div>
+                
+                <div id="other" class="tab-pane">
+                    <p>This is a third tab.</p>
+                </div>
+              
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+        
+<div id="info-boxes" class="row">
+    
+    <div class="info-box span4">
+        <h4>The Phoenix, Arizona Network of Hackers</h4>
+        <p>The PHX2600 is a local group of hackers and technology enthusiasts that meet on a monthly basis to discuss all things code, tech or otherwise hacker related. Most members enjoy exploring and exploting technology and life in an effort to better use and understand those systems.</p>
+    </div>
+    
+    <div class="info-box span4">
+        <h4>Meeting Info</h4>
+        <p>Meetings are held on the first Friday of every month starting at 6PM at the location listed above. There is rarely any planed schedule for the meetings, anyone who is prepared and wishes to give a presentation or show off a project may do so at any time during a meeting. All meetings are open to the public so feel free to drop by.</p>
+    </div>
+    
+    <div class="info-box span4">
+        <h4>News and Updates</h4>
+        <p>You can follow PHX2600 on Twitter or Google+ for miscellaneous news, meeting reminders and more.</p>
+        <br/>
+        <center>
+            <p>
+                <a href="https://twitter.com/#!/PHX2600" title="Follow PHX2600 on Twitter" class="social-link twitter">Twitter</a>
+                <a href="https://plus.google.com/117910250839532154362/posts" title="Follow PHX2600 on Google+" class="social-link google">Google+</a>
+            </p>
+        </center>
+    </div>
+    
+</div>
+
+
+<div id="meeting-guidelines" class="row">
+    
+    <div class="span12">
+        <h3 class="section-title">Meeting Guidelines</h3>
+    </div>
+    
+    <div class="guidelines span6">
+        
+        <h4>Official 2600 Guidelines:</h4>
+        
+        <p><small>These rules are taken directly from the main 2600 website.</small></p>
+        
+        <ol>
+            <li class="rules">We meet in a public area. Nobody is excluded. We have nothing to hide and we don't presume to judge who is worthy of attending and who is not. If law enforcement harasses us, it will backfire as it did at the infamous Washington DC meeting in 11/92. (You can find more information on this event in the Secret Service section of our web site.)</li>
+            <li class="rules">We act in a responsible manner. We don't do illegal things and we don't cause problems for the place we're meeting in. *Most* 2600 meetings are welcomed by the establishments we choose.</li>
+            <li class="rules">We meet on the first Friday of the month between 5 pm and 8 pm local time. While there will always be people who can't make this particular time, the same will hold true for *any* time or day chosen. By having all of the meetings on the same day, it makes it very easy to remember, opens up the possibility for inter-meeting communication, and really causes hell for the federal agencies who want to monitor everything we do. (A few meetings have slight variations on the meeting time - these are noted accordingly.)</li>
+            <li class="rules">While meetings are not limited to big cities, most of them take place in large metropolitan areas that are easily accessible.While it's convenient to have a meeting in your home town, we encourage people to go to meetings where they'll meet people from as wide an area as possible. So if there's a meeting within an hour or two of your town, go to that one rather than have two smaller meetings fairly close to each other. You always have the opportunity to get together with "home town hackers" any time you want.</li>
+            <li class="rules">All meetings *must* contact us to let us know how things are going even if nothing unusual is happening. If we don't hear from your city on a regular basis, we'll have to stop publicizing the site since telling people to go to where no meeting is really doesn't do anyone a service. You can email us at meetings@2600.com or call us at (631) 751-2600. We also need a way of getting back in touch with you.</li>
+        </ol>
+        
+        <p>Anyone can have meetings and set whatever rules they wish. However, if they're going to be affiliated with 2600, we ask that these few guidelines be observed. Thanks.</p>
+    
+    </div>
+    
+    <div class="guidelines span6">
+            
+        <h4>PHX2600 Specific Rules:</h4>
+        
+        <p>Over time our Phoenix meetings have built a reputation of being a very positive environment where no one will get "flamed" by someone that is super "1337." If you think you're better or smarter than someone, keep your arrogance to yourself, but not the knowledge. I'd like to continue to see such a friendly hacker environment and learn even more from it as well.</p>
+        
+        <h5>Projects &amp; Presentations</h5>
+        
+        <ul>
+            <li>There is rarely any planed schedule for the meetings, anyone who is prepared and wishes to give a presentation or show off a project may at any time during a meeting. Also, no one will be forced to give a presentation at any point, ever.</li>
+        </ul>
+
+        <h5>2550 Meetings (2600 Hangouts)</h5>
+        <ul>
+            <li>2550 meetings (2600 hangouts) are unofficial meetings where a few or more of us from the group get together and just hang out (be it a movie, meal, hack night, etc.). 2550 meetings are rarely planned and usually quite spontaneous but usually announced via PHX2600 public channels (on the forum, via Twitter, etc.).</li>
+        </ul>
+        
+        <div class="note well">
+            <h5>Note to anyone interested in starting a new meeting:</h5>
+            <p>If you've read the above guidelines and you're interested in starting a meeting, please do the following: Advertise the meeting place in your community - BBS's are one good way of getting the word out. Post meeting info on the usenet newsgroup alt.2600. Send us email (meetings@2600.com) telling us how your meetings are going after each meeting. We cannot publicize the meetings in 2600 until they have become established and it's up to you to get the word out in your community. Good luck!</p>
+            <p>IRC USERS: Connect to irc.2600.net and go to the channel for your state or country in order to find other people in your area. Use your state's two letter abbreviation followed by 2600 in order to find the right channel (#md2600, #ct2600, etc.) If you're outside the United States, put your two letter Internet country code after the 2600 (#2600au, #2600dk). For example, California and Canada use the same two letter abbreviation (CA). The California channel would be #ca2600 while the Canadian channel would be #2600ca. Other channels may exist for specific meetings within these areas - they should be referenced in the main state or country channels so people can find them. All 2600 channels, like the meetings, are open to all.</p>
+        </div>
+        
+    </div>
+
+</div>
+    
+<div id="mapModal" class="modal fade hide">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Citizen Espresso Bar</h3>
+    </div>
+    <div class="modal-body">
+        <iframe width="530" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=201530905649472551260.0004c1434525ddca089c2&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=33.50764,-112.073979&amp;spn=0.006441,0.011351&amp;z=16&amp;iwloc=0004c1434c603ebab7cfa&amp;output=embed"></iframe>
+    </div>
+</div>
