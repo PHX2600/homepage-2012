@@ -23,6 +23,7 @@
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -106,7 +107,7 @@
                     
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#latest-topics" data-toggle="tab">Latest Topics</a></li>
-                        <li><a href="#active-topics" data-toggle="tab">Active Topics</a></li>
+                        <li><a href="#twitter-feed" data-toggle="tab">Latest Tweets</a></li>
                         <?php /*
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
@@ -132,7 +133,7 @@
                             ?>
                             
                             <ul class="feed-list">
-                                <?php $x = 1; foreach ($feed->get_items() as $item): ?>
+                                <?php $x = 1; foreach ($feed->get_items(0, 10) as $item): ?>
                                     
                                     <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
                                         <a href="<?php echo $item->get_permalink(); ?>">
@@ -145,37 +146,27 @@
                             
                         </div>
                         
-                        <div id="active-topics" class="tab-pane">
+                        <div id="twitter-feed" class="tab-pane">
                             
                             <?php
                                 // Fetch the feed and run SimplePie then make sure the content is
                                 // sent to the browser as text/html and the UTF-8 character set
-                                $feed->set_feed_url('https://www.phx2600.org/forum/feed.php?mode=topics_active');
+                                $feed->set_feed_url('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=phx2600');
                                 $feed->init();
                                 $feed->handle_content_type();
                             ?>
                             
-                            <?php if (count($feed->get_items()) == 0): ?>
-                                
-                                <div class="alert alert-error">
-                                    No currently active topics.
-                                </div>
-                                
-                            <?php else: ?>
-                            
-                                <ul class="feed-list">
-                                    <?php $x = 1; foreach ($feed->get_items() as $item): ?>
-                                        
-                                        <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
-                                            <a href="<?php echo $item->get_permalink(); ?>">
-                                                <span class="feed-title"><?php echo $item->get_title(); ?></span>
-                                                <small><?php echo ($author = $item->get_author()) ? $author->get_name() : FALSE; ?> on <?php echo $item->get_date('M j, Y - g:i a'); ?></small>
-                                            </a>
-                                        </li>
-                                    <?php $x++; endforeach; ?>
-                                </ul>
-                                
-                            <?php endif; ?>
+                            <ul class="feed-list">
+                                <?php $x = 1; foreach ($feed->get_items(0, 10) as $item): ?>
+                                    
+                                    <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
+                                        <a href="<?php echo $item->get_permalink(); ?>">
+                                            <span class="feed-text"><?php echo $item->get_description(); ?></span>
+                                            <small><?php echo $item->get_date('M j, Y - g:i a'); ?></small>
+                                        </a>
+                                    </li>
+                                <?php $x++; endforeach; ?>
+                            </ul>
                             
                         </div>
                         
@@ -283,7 +274,7 @@
             <h3>Bookmans Entertainment Exchange</h3>
         </div>
         <div class="modal-body">
-            <iframe width="530" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=Bookmans+Entertainment+Exchange&amp;hl=en&amp;t=m&amp;ie=UTF8&amp;view=map&amp;cid=6584790275915782619&amp;ll=33.402606,-111.851978&amp;spn=0.012898,0.022745&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+            <iframe width="530" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Bookmans+Entertainment+Exchange&amp;hl=en&amp;t=m&amp;ie=UTF8&amp;view=map&amp;cid=6584790275915782619&amp;ll=33.402606,-111.851978&amp;spn=0.012898,0.022745&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
         </div>
     </div>
     

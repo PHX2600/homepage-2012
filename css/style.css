@@ -6,7 +6,6 @@ body { padding: 0 0 20px; }
 
 a { color: #981B1E; }
 
-
 /* -------------------------------------------------------------------------- */
 /* -----| HEADER |----------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -20,6 +19,10 @@ a { color: #981B1E; }
     border-bottom: 5px solid #981B1E;
     padding: 15px 30px;
     overflow: hidden;
+}
+
+body.small-mode .header {
+    padding: 15px 20px !important;
 }
 
 .site-title {
@@ -95,6 +98,10 @@ a { color: #981B1E; }
 /* -------------------------------------------------------------------------- */
 /* -----| CONTENT |---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
+
+body.small-mode > .container {
+    padding: 0 20px;
+}
 
 .content-box {
     background-color: #FFF;
@@ -206,7 +213,8 @@ a { color: #981B1E; }
     background-color: #FFF;
 }
 
-.feed-list li a {
+.feed-list li a,
+.feed-item-wrap {
     display: block;
     padding: 5px;
 }
@@ -221,6 +229,13 @@ a { color: #981B1E; }
     display: block;
     font-size: 1em;
     font-weight: bold;
+}
+
+.feed-list .feed-text {
+    color: #981B1E;
+    display: block;
+    font-size: .95em;
+    text-align: justify;
 }
 
 .feed-list small {
