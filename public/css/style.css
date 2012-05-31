@@ -15,7 +15,7 @@ a { color: #981B1E; }
 }
 
 .header {
-    background: #121212 url(images/black_gradient.png) repeat-x left top;
+    background: #121212 url(../img/black_gradient.png) repeat-x left top;
     border-bottom: 5px solid #981B1E;
     padding: 15px 30px;
     overflow: hidden;
