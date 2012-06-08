@@ -30,11 +30,33 @@ class IndexController extends Zend_Controller_Action
             
         }
         
-        // Instantiate forum RSS object
-        $this->view->forumFeed = new Zend_Feed_Atom('https://www.phx2600.org/forum/feed.php?mode=topics');
+        // Instantiate the Zend_Cache from application.ini
+        $cache = $this->getFrontController()
+            ->getParam('bootstrap')
+            ->getPluginResource('cachemanager')
+            ->getCacheManager()->getCache('default');
         
-        // Instantiate twitter RSS object
-        $this->view->twitterFeed = new Zend_Feed_Rss('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=phx2600');
+        // Load forum feed from cache if applicable else fetch it and cache it
+        if ( ($this->view->forumFeed = $cache->load('forumFeed')) === false ) {
+            
+            // Instantiate forum RSS object
+            $this->view->forumFeed = new Zend_Feed_Atom('https://www.phx2600.org/forum/feed.php?mode=topics');
+            
+            // Cache the feed
+            $cache->save($this->view->forumFeed, 'forumFeed');
+            
+        }
+        
+        // Load Twitter feed from cache if applicable else fetch it and cache it
+        if ( ($this->view->twitterFeed = $cache->load('twitterFeed')) === false ) {
+            
+            // Instantiate twitter RSS object
+            $this->view->twitterFeed = new Zend_Feed_Rss('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=phx2600');
+            
+            // Cache the feed
+            $cache->save($this->view->twitterFeed, 'twitterFeed');
+            
+        }
         
     }
 
