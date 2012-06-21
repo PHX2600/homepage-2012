@@ -68,17 +68,25 @@
                 <div id="latest-topics" class="tab-pane active">
                     
                     <ul class="feed-list">
-                        <?php $x = 1; foreach ($this->forumFeed as $item): ?>
+                        <?php if ($this->forumFeed !== false): ?>
                             
-                            <?php $date = new DateTime($item->published()); ?>
+                            <?php $x = 1; foreach ($this->forumFeed as $item): ?>
+                                
+                                <?php $date = new DateTime($item->published()); ?>
+                                
+                                <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
+                                    <a href="<?php echo $item->link['href']; ?>">
+                                        <span class="feed-title"><?php echo $item->title(); ?></span>
+                                        <small><?php echo $item->author->name(); ?> on <?php echo date('M j, Y - g:i a', $date->getTimestamp()); ?></small>
+                                    </a>
+                                </li>
+                            <?php $x++; endforeach; ?>.
                             
-                            <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
-                                <a href="<?php echo $item->link['href']; ?>">
-                                    <span class="feed-title"><?php echo $item->title(); ?></span>
-                                    <small><?php echo $item->author->name(); ?> on <?php echo date('M j, Y - g:i a', $date->getTimestamp()); ?></small>
-                                </a>
-                            </li>
-                        <?php $x++; endforeach; ?>
+                       <?php else: ?>
+                           
+                           <li>Error: Something went wrong with the feed</li>
+                           
+                       <?php endif; ?>
                     </ul>
                     
                 </div>
@@ -86,17 +94,25 @@
                 <div id="twitter-feed" class="tab-pane">
                     
                     <ul class="feed-list">
-                        <?php $x = 1; foreach ($this->twitterFeed as $item): ?>
+                        <?php if ($this->twitterFeed !== false): ?>
                             
-                            <?php $date = new DateTime($item->pubDate()); ?>
+                            <?php $x = 1; foreach ($this->twitterFeed as $item): ?>
+                                
+                                <?php $date = new DateTime($item->pubDate()); ?>
+                                
+                                <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
+                                    <a href="<?php echo $item->link(); ?>">
+                                        <span class="feed-text"><?php echo str_replace('PHX2600: ', '', $item->description()); ?></span>
+                                        <small><?php echo date('M j, Y - g:i a', $date->getTimestamp()); ?></small>
+                                    </a>
+                                </li>
+                            <?php $x++; endforeach; ?>
                             
-                            <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
-                                <a href="<?php echo $item->link(); ?>">
-                                    <span class="feed-text"><?php echo str_replace('PHX2600: ', '', $item->description()); ?></span>
-                                    <small><?php echo date('M j, Y - g:i a', $date->getTimestamp()); ?></small>
-                                </a>
-                            </li>
-                        <?php $x++; endforeach; ?>
+                       <?php else: ?>
+                           
+                           <li>Error: Fail whale detected (Twitter issues)</li>
+                           
+                       <?php endif; ?>
                     </ul>
                     
                 </div>

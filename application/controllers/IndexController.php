@@ -39,8 +39,13 @@ class IndexController extends Zend_Controller_Action
         // Load forum feed from cache if applicable else fetch it and cache it
         if ( ($this->view->forumFeed = $cache->load('forumFeed')) === false ) {
             
-            // Instantiate forum RSS object
-            $this->view->forumFeed = new Zend_Feed_Atom('https://www.phx2600.org/forum/feed.php?mode=topics');
+            try {
+                // Instantiate forum RSS object
+                $this->view->forumFeed = new Zend_Feed_Atom('https://www.phx2600.org/forum/feed.php?mode=topics');
+            } catch (Exception $e) {
+                // Set feed data to false on error
+                $this->view->forumFeed = false;
+            }
             
             // Cache the feed
             $cache->save($this->view->forumFeed, 'forumFeed');
@@ -50,8 +55,13 @@ class IndexController extends Zend_Controller_Action
         // Load Twitter feed from cache if applicable else fetch it and cache it
         if ( ($this->view->twitterFeed = $cache->load('twitterFeed')) === false ) {
             
-            // Instantiate twitter RSS object
-            $this->view->twitterFeed = new Zend_Feed_Rss('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=phx2600');
+            try {
+                // Instantiate twitter RSS object
+                $this->view->twitterFeed = new Zend_Feed_Rss('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=phx2600');
+            } catch (Exception $e) {
+                // Set feed data to false on error
+                $this->view->twitterFeed = false;
+            }
             
             // Cache the feed
             $cache->save($this->view->twitterFeed, 'twitterFeed');
