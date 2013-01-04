@@ -2,7 +2,10 @@
 /* -----| GENERAL |---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-body { padding: 0 0 20px; }
+body {
+    min-width: 980px;
+    padding: 0 0 20px;
+}
 
 a { color: #981B1E; }
 
@@ -18,12 +21,7 @@ a { color: #981B1E; }
     background: #121212 url(../img/black_gradient.png) repeat-x left top;
     border-bottom: 5px solid #981B1E;
     padding: 15px 0;
-    min-width: 940px;
     overflow: hidden;
-}
-
-body.small-mode .header {
-    padding: 15px 20px !important;
 }
 
 .site-title {
@@ -89,10 +87,6 @@ body.small-mode .header {
 /* -------------------------------------------------------------------------- */
 /* -----| CONTENT |---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-
-body.small-mode > .container {
-    padding: 0 20px;
-}
 
 .content-box {
     background-color: #FFF;
@@ -328,6 +322,11 @@ body.small-mode > .container {
 /* -------------------------------------------------------------------------- */
 /* -----| BOOTSTRAP OVERRIDES |---------------------------------------------- */
 /* -------------------------------------------------------------------------- */
+
+
+.container {
+    padding: 0 20px;
+}
 
 .alert {
     margin: 10px 0;
