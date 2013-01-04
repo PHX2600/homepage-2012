@@ -127,15 +127,20 @@ body.small-mode > .container {
 #next-meeting .meeting-month,
 #next-meeting .meeting-day,
 #next-meeting .meeting-year {
-    background-color: #FFF;
+    background-color: #333;
+    background: -moz-linear-gradient(top, #222 0%, #444 100%);
+    background: -webkit-linear-gradient(top, #222 0%, #444 100%);
+    background: -ms-linear-gradient(top, #222 0%, #444 100%);
+    background: linear-gradient(to bottom, #222 0%, #444 100%);
     border-radius: 8px;
     box-shadow: 0px 2px 4px #999;
-    color: #333;
+    color: #EEE;
     display: inline-block;
     font-size: 4.75em;
     font-weight: bold;
     margin: 5px;
     position: relative;
+    text-shadow: 0 1px 2px #000;
     -moz-border-radius: 8px;
     -moz-box-shadow: 0px 2px 4px #999;
     -webkit-border-radius: 8px;
@@ -143,11 +148,11 @@ body.small-mode > .container {
 }
 
 #next-meeting .number {
-    padding: 46px 32px;
+    padding: 42px 30px;
 }
 
 #next-meeting .midLine {
-    background-color: #333;
+    background-color: #222;
     height: 1px;
     position: absolute;
     top: 50%;
@@ -176,7 +181,7 @@ body.small-mode > .container {
 
 #forum-feed .tab-content {
     border-bottom: 1px solid #DDD;
-    height: 232px;
+    height: 242px;
     margin-bottom: 20px;
     overflow-y: auto;
 }
