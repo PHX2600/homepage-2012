@@ -245,7 +245,7 @@ body.small-mode > .container {
 /* -----| INFO BOXES |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-#info-boxes h4 {
+#info-boxes h5 {
     border-bottom: 1px dotted #333;
     margin-bottom: .5em;
 }
