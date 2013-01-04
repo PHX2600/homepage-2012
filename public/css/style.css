@@ -65,7 +65,6 @@ body.small-mode .header {
     color: #FFF;
     display: block;
     padding: 5px 8px;
-    font-size: 1em;
     font-weight: bold;
     text-decoration: none;
 }
@@ -73,15 +72,6 @@ body.small-mode .header {
 .site-navigation li a:hover {
     color: #333;
     background-color: #FFF;
-}
-
-.site-navigation li a:hover i {
-    background-image: url(../img/glyphicons-halflings.png);
-}
-
-.site-navigation li a i {
-    position: relative;
-    top: 1px;
 }
 
 .site-navigation li.active .link-wrapper {
