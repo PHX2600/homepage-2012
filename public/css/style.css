@@ -41,7 +41,7 @@ a { color: #981B1E; }
     margin: 10px 0;
     padding: 5px;
     text-align: center;
-} 
+}
 
 
 /* -------------------------------------------------------------------------- */
@@ -251,20 +251,27 @@ a { color: #981B1E; }
 }
 
 .social-link {
+    border-radius: 4px;
     color: #FFF;
-    font-size: 1.2em;
-    padding: 6px 10px 6px 38px;
+    font-size: 1.5em;
+    margin: 0 3px;
+    padding: 6px 10px;
 }
 
 .social-link.twitter {
-    background: #46C8F5 url(../img/twitter_32.png) no-repeat left center;
+    background-color: #00ACEE;
 }
 
 .social-link.google {
-    background: #DD4C39 url(../img/google_plus_32.png) no-repeat left center;
+    background-color: #DD4B39;
+}
+
+.social-link.rss {
+    background-color: #F90;
 }
 
 .social-link:hover {
+    opacity: 0.8;
     color: #FFF;
     cursor: pointer;
     text-decoration: none;
