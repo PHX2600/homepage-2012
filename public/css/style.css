@@ -251,6 +251,7 @@ a { color: #981B1E; }
 }
 
 .social-link {
+    background-color: #CCC;
     border-radius: 4px;
     color: #FFF;
     font-size: 1.5em;
@@ -264,6 +265,10 @@ a { color: #981B1E; }
 
 .social-link.google {
     background-color: #DD4B39;
+}
+
+.social-link.groups {
+    background-color: #555;
 }
 
 .social-link.rss {
