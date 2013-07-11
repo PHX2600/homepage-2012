@@ -166,24 +166,16 @@ a { color: #981B1E; }
 /* -----| FEED LISTS |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-#forum-feed h3 {
+#forum-feed h4 {
     border-bottom: 1px dotted #333;
+    margin: 0;
+    padding-bottom: 2px;
 }
 
-#forum-feed .nav {
-    margin-bottom: 0 !important;
-}
-
-#forum-feed .tab-content {
+.forum-feed-wrapper {
     border-bottom: 1px solid #DDD;
-    height: 242px;
-    margin-bottom: 20px;
+    height: 259px;
     overflow-y: auto;
-}
-
-#forum-feed .dropdown-menu {
-    left: auto;
-    right: 0;
 }
 
 .feed-list {
@@ -240,7 +232,7 @@ a { color: #981B1E; }
 /* -----| INFO BOXES |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-#info-boxes h5 {
+.info-box h5 {
     border-bottom: 1px dotted #333;
     margin-bottom: .5em;
 }

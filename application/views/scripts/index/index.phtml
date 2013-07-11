@@ -50,82 +50,31 @@
 
     <div id="forum-feed" class="span4 pull-right">
 
-        <div class="tabbable">
+        <h4>Latest Topics</h4>
 
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#latest-topics" data-toggle="tab">Latest Topics</a></li>
-                <li><a href="#twitter-feed" data-toggle="tab">Latest Tweets</a></li>
-                <?php /*
-                <li class="dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                        More <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#other" data-toggle="tab">Other</a></li>
-                    </ul>
-                </li>
-                */ ?>
+        <div class="forum-feed-wrapper">
+
+            <ul class="feed-list">
+                <?php if ($this->forumFeed !== false): ?>
+
+                    <?php $x = 1; foreach ($this->forumFeed as $item): ?>
+
+                        <?php $date = new DateTime($item->published()); ?>
+
+                        <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
+                            <a href="<?php echo $item->link['href']; ?>">
+                                <span class="feed-title"><?php echo $item->title(); ?></span>
+                                <small><?php echo $item->author->name(); ?> on <?php echo date('M j, Y - g:i a', $date->getTimestamp()); ?></small>
+                            </a>
+                        </li>
+                    <?php $x++; endforeach; ?>
+
+               <?php else: ?>
+
+                   <li>Error: Something went wrong with the feed</li>
+
+               <?php endif; ?>
             </ul>
-
-            <div class="tab-content">
-
-                <div id="latest-topics" class="tab-pane active">
-
-                    <ul class="feed-list">
-                        <?php if ($this->forumFeed !== false): ?>
-
-                            <?php $x = 1; foreach ($this->forumFeed as $item): ?>
-
-                                <?php $date = new DateTime($item->published()); ?>
-
-                                <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
-                                    <a href="<?php echo $item->link['href']; ?>">
-                                        <span class="feed-title"><?php echo $item->title(); ?></span>
-                                        <small><?php echo $item->author->name(); ?> on <?php echo date('M j, Y - g:i a', $date->getTimestamp()); ?></small>
-                                    </a>
-                                </li>
-                            <?php $x++; endforeach; ?>
-
-                       <?php else: ?>
-
-                           <li>Error: Something went wrong with the feed</li>
-
-                       <?php endif; ?>
-                    </ul>
-
-                </div>
-
-                <div id="twitter-feed" class="tab-pane">
-
-                    <ul class="feed-list">
-                        <?php if ($this->twitterFeed !== false): ?>
-
-                            <?php $x = 1; foreach ($this->twitterFeed as $item): ?>
-
-                                <?php $date = new DateTime($item->pubDate()); ?>
-
-                                <li class="<?php echo ($x % 2 == 0) ? 'even' : 'odd'; ?>">
-                                    <a href="<?php echo $item->link(); ?>">
-                                        <span class="feed-text"><?php echo str_replace('PHX2600: ', '', $item->description()); ?></span>
-                                        <small><?php echo date('M j, Y - g:i a', $date->getTimestamp()); ?></small>
-                                    </a>
-                                </li>
-                            <?php $x++; endforeach; ?>
-
-                       <?php else: ?>
-
-                           <li>Error: Fail whale detected (Twitter issues)</li>
-
-                       <?php endif; ?>
-                    </ul>
-
-                </div>
-
-                <div id="other" class="tab-pane">
-                    <p>This is a third tab.</p>
-                </div>
-
-            </div>
 
         </div>
 

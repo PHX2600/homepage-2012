@@ -40,8 +40,8 @@ class IndexController extends Zend_Controller_Action
         if ( ($this->view->forumFeed = $cache->load('forumFeed')) === false ) {
             
             try {
-                // Instantiate forum RSS object
-                $this->view->forumFeed = new Zend_Feed_Atom('https://www.phx2600.org/forum/feed.php?mode=topics');
+                // Instantiate forum Atom object
+                $this->view->forumFeed = new Zend_Feed_Atom('https://groups.google.com/forum/feed/phx2600/topics/atom.xml?num=15');
             } catch (Exception $e) {
                 // Set feed data to false on error
                 $this->view->forumFeed = false;
@@ -49,23 +49,7 @@ class IndexController extends Zend_Controller_Action
             
             // Cache the feed
             $cache->save($this->view->forumFeed, 'forumFeed');
-            
-        }
-        
-        // Load Twitter feed from cache if applicable else fetch it and cache it
-        if ( ($this->view->twitterFeed = $cache->load('twitterFeed')) === false ) {
-            
-            try {
-                // Instantiate twitter RSS object
-                $this->view->twitterFeed = new Zend_Feed_Rss('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=phx2600');
-            } catch (Exception $e) {
-                // Set feed data to false on error
-                $this->view->twitterFeed = false;
-            }
-            
-            // Cache the feed
-            $cache->save($this->view->twitterFeed, 'twitterFeed');
-            
+
         }
         
     }
