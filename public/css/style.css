@@ -275,7 +275,7 @@ a { color: #981B1E; }
     background-color: #F90;
 }
 
-.social-link:hover {
+.social-link:hover, .social-link:active {
     opacity: 0.8;
     color: #FFF;
     cursor: pointer;
