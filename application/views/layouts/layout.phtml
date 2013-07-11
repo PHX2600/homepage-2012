@@ -1,21 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
     <title>PHX2600 - The Phoenix, Arizona Network of Hackers</title>
 
-    <link rel="shortcut icon" href="images/xhtml.png" />
+    <link rel="shortcut icon" href="images/xhtml.png">
 
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <? if($this->css): ?>
         <? foreach ($this->css as $css): ?>
-            <link rel="stylesheet" type="text/css" href="<?= $css; ?>" />
+            <link rel="stylesheet" type="text/css" href="<?= $css; ?>">
         <? endforeach; ?>
     <? endif; ?>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <? if ($this->js): ?>
         <? foreach ($this->js as $js): ?>
@@ -23,7 +23,7 @@
         <? endforeach; ?>
     <? endif; ?>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         <div class="container">
             <h1 class="site-title">
                 <a href="/">
-                    <img src="/img/phx2600_logo.png" width="214" height="40" alt="PHX2600 - The Phoenix, Arizona Network of Hackers" title="PHX2600 - The Phoenix, Arizona Network of Hackers" />
+                    <img src="/img/phx2600_logo.png" width="214" height="40" alt="PHX2600 - The Phoenix, Arizona Network of Hackers" title="PHX2600 - The Phoenix, Arizona Network of Hackers">
                 </a>
             </h1>
 
@@ -54,7 +54,7 @@
 
         <?= $this->layout()->content; ?>
 
-        <hr/>
+        <hr>
 
         <div id="footer">
             &copy; <?php echo date('Y'); ?> <a href="https://www.phx2600.org">PHX2600</a>
