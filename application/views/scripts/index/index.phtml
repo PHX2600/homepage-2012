@@ -2,12 +2,6 @@
     <strong>Hacker</strong> [hack·er] /n/ - One who seeks to understand the details of a system and strives to stretch it's capabilities beyond the original intent.
 </div>
 
-<?php if (strtotime('today') <= strtotime('July 5, 2013')): ?>
-    <div class="alert alert-error">
-        <strong>ATTENTION!</strong> The meeting location has been changed!
-    </div>
-<?php endif; ?>
-
 <?php if ($this->meetingTonight): ?>
     <div class="alert alert-success">
         <strong>Meeting tonight starting at 6pm!</strong>
