@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 body {
+    font-family: 'Droid Sans', sans-serif;
     min-width: 980px;
     padding: 0 0 20px;
 }
@@ -38,7 +39,7 @@ a { color: #981B1E; }
     border-bottom: 1px solid #CCC;
     color: #666;
     display: block;
-    margin: 10px 0;
+    margin: 20px 0;
     padding: 5px;
     text-align: center;
 }
@@ -87,6 +88,10 @@ a { color: #981B1E; }
 /* -------------------------------------------------------------------------- */
 /* -----| CONTENT |---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
+
+.page-wrapper {
+    padding-top: 20px;
+}
 
 .content-box {
     background-color: #FFF;
@@ -213,6 +218,9 @@ a { color: #981B1E; }
     display: block;
     font-size: .9em;
     font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .feed-list .feed-text {

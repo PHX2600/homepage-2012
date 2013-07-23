@@ -6,6 +6,7 @@
 
     <link rel="shortcut icon" href="images/xhtml.png">
 
+    <!-- STYLES -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -15,6 +16,7 @@
         <? endforeach; ?>
     <? endif; ?>
 
+    <!-- SCRIPTS -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <? if ($this->js): ?>
@@ -23,6 +25,10 @@
         <? endforeach; ?>
     <? endif; ?>
 
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- META -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
@@ -37,11 +43,14 @@
             </h1>
 
             <ul class="site-navigation pull-right">
-                <li class="active">
+                <li>
                     <a href="/"><i class="icon-home"></i> Home</a>
                 </li>
                 <li>
-                    <a href="http://goo.gl/nUEzp"><i class="icon-comments"></i> Discussion</a>
+                    <a href="http://goo.gl/nUEzp"><i class="icon-envelope"></i> Discussion</a>
+                </li>
+                <li>
+                    <a href="/chat"><i class="icon-comments"></i> Chat</a>
                 </li>
                 <li>
                     <a href="/archive"><i class="icon-download-alt"></i> Archive</a>
