@@ -102,18 +102,17 @@ a { color: #981B1E; }
     -webkit-border-radius: 10px;
 }
 
-.section-title {
-    background-color: #121212;
-    border-radius: 3px;
-    color: #FFF;
-    margin-bottom: 1em;
-    padding: 3px 8px;
-}
-
 .page-title {
     margin: .5em 0;
 }
 
+.guidelines-title {
+    background-color: #121212;
+    border-radius: 3px;
+    color: #FFF;
+    margin: 0 0 1em 0;
+    padding: 3px 8px;
+}
 
 /* -------------------------------------------------------------------------- */
 /* -----| MEETING INFO |----------------------------------------------------- */
@@ -175,6 +174,17 @@ a { color: #981B1E; }
     border-bottom: 1px dotted #333;
     margin: 0;
     padding-bottom: 2px;
+}
+
+
+#forum-feed h4 .feed-icon {
+    color: #F90;
+    display: inline-block;
+}
+
+#forum-feed h4 .feed-icon:hover {
+    color: #D80;
+    text-decoration: none;
 }
 
 .forum-feed-wrapper {
@@ -260,20 +270,16 @@ a { color: #981B1E; }
     padding: 8px 10px;
 }
 
+.social-link.groups {
+    background-color: #555;
+}
+
 .social-link.twitter {
     background-color: #00ACEE;
 }
 
 .social-link.google {
     background-color: #DD4B39;
-}
-
-.social-link.groups {
-    background-color: #555;
-}
-
-.social-link.rss {
-    background-color: #F90;
 }
 
 .social-link:hover, .social-link:active {
