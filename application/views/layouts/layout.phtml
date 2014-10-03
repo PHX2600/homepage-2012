@@ -10,20 +10,20 @@
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <? if($this->css): ?>
-        <? foreach ($this->css as $css): ?>
+    <?php if($this->css): ?>
+        <?php foreach ($this->css as $css): ?>
             <link rel="stylesheet" type="text/css" href="<?= $css; ?>">
-        <? endforeach; ?>
-    <? endif; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <? if ($this->js): ?>
-        <? foreach ($this->js as $js): ?>
+    <?php if ($this->js): ?>
+        <?php foreach ($this->js as $js): ?>
             <script type="text/javascript" src="<?= $js; ?>"></script>
-        <? endforeach; ?>
-    <? endif; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
 
     <!-- FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
